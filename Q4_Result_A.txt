@@ -1,0 +1,31 @@
+-- specification  G !(A3 = A7)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 1.1 <-
+    A1 = 1
+    A2 = 2
+    A3 = 3
+    A4 = 4
+    A5 = 5
+    A6 = 6
+    A7 = 7
+    A8 = 8
+  -> State: 1.2 <-
+    A3 = 6
+  -> State: 1.3 <-
+    A4 = 11
+  -> State: 1.4 <-
+    A3 = 13
+  -> State: 1.5 <-
+    A6 = 12
+  -> State: 1.6 <-
+    A7 = 20
+  -> State: 1.7 <-
+    A4 = 18
+  -> State: 1.8 <-
+    A3 = 20
+  -- Loop starts here
+  -> State: 1.9 <-
+    A2 = 21
+  -> State: 1.10 <-

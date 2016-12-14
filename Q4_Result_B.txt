@@ -1,0 +1,51 @@
+-- specification  G !((A3 = A5 & A5 = A7) & A7 = A3)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 2.1 <-
+    A1 = 1
+    A2 = 2
+    A3 = 3
+    A4 = 4
+    A5 = 5
+    A6 = 6
+    A7 = 7
+    A8 = 8
+  -> State: 2.2 <-
+    A4 = 8
+  -> State: 2.3 <-
+    A3 = 10
+  -> State: 2.4 <-
+    A2 = 11
+  -> State: 2.5 <-
+    A3 = 19
+  -> State: 2.6 <-
+    A2 = 20
+  -> State: 2.7 <-
+    A3 = 28
+  -> State: 2.8 <-
+    A2 = 29
+  -> State: 2.9 <-
+    A3 = 37
+  -> State: 2.10 <-
+    A6 = 12
+  -> State: 2.11 <-
+    A7 = 20
+  -> State: 2.12 <-
+    A6 = 25
+  -> State: 2.13 <-
+    A7 = 33
+  -> State: 2.14 <-
+    A6 = 38
+  -> State: 2.15 <-
+    A7 = 46
+  -> State: 2.16 <-
+    A5 = 46
+  -> State: 2.17 <-
+    A2 = 38
+  -> State: 2.18 <-
+    A3 = 46
+  -- Loop starts here
+  -> State: 2.19 <-
+    A2 = 47
+  -> State: 2.20 <-

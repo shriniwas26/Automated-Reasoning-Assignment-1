@@ -1,0 +1,38 @@
+MODULE main
+
+VAR
+A1: 0..90;
+A2: 0..90;
+A3: 0..90;
+A4: 0..90;
+A5: 0..90;
+A6: 0..90;
+A7: 0..90;
+A8: 0..90;
+
+INIT
+A1 = 1 & A2 = 2 & A3 = 3 & A4 = 4 & A5 = 5 & A6 = 6 & A7 = 7 & A8 = 8
+
+TRANS
+((next(A1) = A1) &  (next(A2) = A1 + A3) & (next(A3) = A3) & (next(A4) = A4) & (next(A5) = A5) & (next(A6) = A6) & (next(A7) = A7) & (next(A8) = A8)) |
+
+((next(A1) = A1) &  (next(A2) = A2) & (next(A3) = A2 + A4) & (next(A4) = A4) & (next(A5) = A5) & (next(A6) = A6) & (next(A7) = A7) & (next(A8) = A8)) |
+
+((next(A1) = A1) &  (next(A2) = A2) & (next(A3) = A3) & (next(A4) = A3 + A5) & (next(A5) = A5) & (next(A6) = A6) & (next(A7) = A7) & (next(A8) = A8)) |
+
+((next(A1) = A1) &  (next(A2) = A2) & (next(A3) = A3) & (next(A4) = A4) & (next(A5) = A4 + A6) & (next(A6) = A6) & (next(A7) = A7) & (next(A8) = A8)) |
+
+((next(A1) = A1) &  (next(A2) = A2) & (next(A3) = A3) & (next(A4) = A4) & (next(A5) = A5) & (next(A6) = A5 + A7) & (next(A7) = A7) & (next(A8) = A8)) |
+
+((next(A1) = A1) &  (next(A2) = A2) & (next(A3) = A3) & (next(A4) = A4) & (next(A5) = A5) & (next(A6) = A6) & (next(A7) = A6 + A8) & (next(A8) = A8))
+
+
+LTLSPEC G !(
+	(A3 = A7)
+)
+
+LTLSPEC G !(
+	(A3 = A5) & (A5 = A7) & (A7 = A3) 
+)
+
+
